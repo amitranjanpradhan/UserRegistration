@@ -49,6 +49,23 @@ public class UserResistraton {
 		return m.matches();
 	}
 	/**
+	 * passwordValidation is a function to check password validation
+	 * @param password
+	 * @return boolean value 
+	 * password validation part 1 is enter minimum 8 characters
+	 */
+	public static boolean passwordValidation(String password) 
+	{
+		String regex = "^[a-z A-z]{8,}$";
+		Pattern p = Pattern.compile(regex);
+		if ( password == null ){
+			return false;
+		}
+		Matcher m = p.matcher(password);
+		
+		return m.matches();
+	}
+	/**
 	 * in main method taking the input from the user to validate
 	 * calling the function to perform.
 	 */
@@ -62,9 +79,12 @@ public class UserResistraton {
 		String lastname = input.nextLine();	 
 	    System.out.println(usernameValidation(lastname));
 	    email();
-	    System.out.print("Enter the your Mobile Number : ");
+	    System.out.print("Enter Your Mobile Number : ");
 		String mobileNumber = input.nextLine();	 
 	    System.out.println(mobileNumValidation(mobileNumber));
+	    System.out.print("Enter Your Password : ");
+		String password = input.nextLine();	 
+	    System.out.println(passwordValidation(password));
 	}
 
 }
