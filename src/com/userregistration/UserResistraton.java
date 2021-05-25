@@ -11,7 +11,6 @@ public class UserResistraton {
 		if (name == null) 
 		{
 			return false;
-			System.out.println("Invalid Name Entered!!! ");
 		}
 		 Matcher m = p.matcher(name);
 		 return m.matches();	 
@@ -22,6 +21,9 @@ public class UserResistraton {
 		System.out.print("Enter Your First Name : ");
 		String firstname = input.nextLine();	 
 	    System.out.println(usernameValidation(firstname));
+	    System.out.print("Enter Your Last Name : ");
+		String lastname = input.nextLine();	 
+	    System.out.println(usernameValidation(lastname));
 	}
 
 }
