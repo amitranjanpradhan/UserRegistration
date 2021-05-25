@@ -7,7 +7,7 @@ public class UserResistraton {
 	/**
 	 * usernameValidation is the function of boolean type 
 	 * check that the 1st letter must be in upper case
-	 * check that minimum character will be there
+	 * check that minimum character will be in there
 	 * @param name
 	 * @return true or false value
 	 */
@@ -37,6 +37,18 @@ public class UserResistraton {
 	    System.out.println("Check the email is correct? " + email.matches(regex));
 	}
 	/**
+	 * mobileNumValidation is a function to check the valid mobile number
+	 * @param mobileNum
+	 * @return the boolean value either true or false
+	 * checking the country code  and 10 digit number must be there
+	 */
+	public static boolean mobileNumValidation(String mobileNum) {
+		String mobileNumber = "^[9][1]\\s[6-9]{1}[0-9]{9}$";
+		Pattern p = Pattern.compile(mobileNumber);		
+		Matcher m = p.matcher(mobileNum);
+		return m.matches();
+	}
+	/**
 	 * in main method taking the input from the user to validate
 	 * calling the function to perform.
 	 */
@@ -50,6 +62,9 @@ public class UserResistraton {
 		String lastname = input.nextLine();	 
 	    System.out.println(usernameValidation(lastname));
 	    email();
+	    System.out.print("Enter the your Mobile Number : ");
+		String mobileNumber = input.nextLine();	 
+	    System.out.println(mobileNumValidation(mobileNumber));
 	}
 
 }
