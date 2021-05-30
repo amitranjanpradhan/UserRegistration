@@ -1,6 +1,6 @@
 package com.userregistration;
 
-import java.util.regex.Pattern;
+import java.util.regex.*;
 
 public class UserRegistration {
     private static boolean check;
