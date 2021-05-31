@@ -39,7 +39,7 @@ public class UserRegistrationParameterizedTest {
     }
 
     @Test
-    public void givenEmail_WhenProper_ShouldReturnTrueParameterisedTest(){
+    public void givenEmail_WhenProper_ShouldReturnTrueParameterisedTest() throws IllegalArgumentException {
         System.out.println("This is Expected Result "+ this.expectedResult);
         Assert.assertEquals(this.expectedResult,userRegistration.checkEmail(this.email));
     }
